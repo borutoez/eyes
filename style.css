@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #6c98f7;
+}
+
+.face {
+    display: flex;
+    gap: 50px;
+}
+
+.eye {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 5px solid #000;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.pupil {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.1s ease;
+}
+
+/* Responsive Design */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .face {
+        gap: 30px;
+    }
+
+    .eye {
+        width: 80px;
+        height: 80px;
+    }
+
+    .pupil {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    .face {
+        flex-direction: column; /* Stack eyes vertically */
+        gap: 20px;
+    }
+
+    .eye {
+        width: 60px;
+        height: 60px;
+    }
+
+    .pupil {
+        width: 20px;
+        height: 20px;
+    }
+}
